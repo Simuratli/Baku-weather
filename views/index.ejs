@@ -18,12 +18,8 @@
     </div>
 
     <div class="about">
-        <h2>
-            <%= "humidity: "+humidity %>
-        </h2>
-        <h2>
-            <%= "presure: "+presure %>
-        </h2>
+        <h2><%= "humidity: "+humidity %></h2>
+        <h2><%= "presure: "+presure %></h2>
         <h2 id="desc"><%= description %></h2>
     </div>
 
@@ -61,7 +57,7 @@
     const hour = date.getHours();
     console.log(hour)
     const html = document.getElementsByTagName('html')
-    if (hour > 7 && hour < 12) {
+    if (hour > 7) {
         document.body.style.backgroundColor = "#0e153a";
         document.body.style.color = "white";
         sun.style.display = 'none';
