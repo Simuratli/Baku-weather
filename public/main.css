@@ -10,11 +10,13 @@ html {
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
 }
+
 #star {
     width: 100%;
     position: absolute;
     top: 0
 }
+
 body {
     background-color: #c5e3f6
 }
@@ -201,6 +203,10 @@ h2 {
 /* responsiv */
 
 @media only screen and (max-width: 600px) {
+    body,
+    html {
+        overflow: hidden;
+    }
     .sun {
         width: 200px;
         right: -10px;
