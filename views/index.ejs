@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app </title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Baku</h1>
+        <h1>
+            <%= temprature +"°" %>
+        </h1>
+    </div>
+
+    <div class="about">
+        <h2>
+            <%= "humidity: "+humidity %>
+        </h2>
+        <h2>
+            <%= "presure: "+presure %>
+        </h2>
+        <h2 id="desc"><%= description %></h2>
+    </div>
+
+
+    <div class="type">
+        <img id="sun" class="sun" src="img/sun.png" alt="">
+        <img id="moon" class="sun" src="img/moon.png" alt="">
+        <img id="cloud" class="cloud" src="img/cloud.png" alt="">
+        <img id="rain" class="rain" src="img/rain.png" alt="">
+        <img id="star" src="img/stars.png">
+    </div>
+    <div align='center' class="earth">
+        <img class="earthimg" src="img/earth.png" alt="">
+    </div>
+</body>
+<script>
+    const desc = document.getElementById('desc').innerHTML;
+    const cloud = document.getElementById('cloud');
+    const rain = document.getElementById('rain');
+    const star = document.getElementById("star");
+    const moon = document.getElementById("moon");
+    const sun = document.getElementById("sun");
+    console.log(desc, cloud, rain);
+
+    if (desc === "few clouds") {
+        console.log("sa");
+        rain.style.display = 'none';
+
+    } else if (desc === 'clear sky') {
+        console.log("sada");
+        cloud.style.display = 'none';
+        rain.style.display = 'none';
+    }
+    var date = new Date();
+    const hour = date.getHours();
+    console.log(hour)
+    const html = document.getElementsByTagName('html')
+    if (hour > 7 && hour < 12) {
+        document.body.style.backgroundColor = "#0e153a";
+        document.body.style.color = "white";
+        sun.style.display = 'none';
+    } else {
+        document.body.style.backgroundColor = "#c5e3f6";
+        document.body.style.color = "white";
+        star.style.display = 'none';
+        moon.style.display = 'none';
+    }
+</script>
+
+</html>

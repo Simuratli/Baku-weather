@@ -1,0 +1,259 @@
+.header {
+    text-align: center;
+}
+
+body,
+html {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+#star {
+    width: 100%;
+    position: absolute;
+    top: 0
+}
+body {
+    background-color: #c5e3f6
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+}
+
+.about h2 {
+    margin-left: 25px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h2 {
+    text-transform: capitalize;
+}
+
+
+/* animate */
+
+@keyframes yourAnimation {
+    0% {
+        transform: rotate(0);
+    }
+    12.5% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    37.5% {
+        transform: rotate(135deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    62.5% {
+        transform: rotate(225deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    87.5% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.earth {
+    width: 100%;
+}
+
+.earth img {
+    animation: yourAnimation 5s infinite 0s linear;
+    width: 600px;
+    z-index: 1;
+    margin-left: -10px;
+}
+
+
+/* earth end */
+
+
+/* sun */
+
+.type .sun {
+    position: absolute;
+    top: -80px;
+    max-width: 300px;
+    z-index: 1;
+    right: -80px;
+}
+
+
+/* animate */
+
+@keyframes sunAnimation {
+    0% {
+        transform: rotate(0);
+    }
+    12.5% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    37.5% {
+        transform: rotate(135deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    62.5% {
+        transform: rotate(225deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    87.5% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.type .sun {
+    animation: sunAnimation 5s infinite 0s linear;
+    transition: 1s ease-in-out;
+}
+
+
+/* clouds */
+
+.cloud {
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+    left: 10px;
+    width: 200px;
+}
+
+.rain {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    z-index: 1;
+    width: 200px;
+}
+
+
+/* animate cloud and rain */
+
+@keyframes animation {
+    0% {
+        left: 10px;
+    }
+    12.5% {
+        left: 70px
+    }
+    25% {
+        left: 130px
+    }
+    37.5% {
+        left: 190px
+    }
+    50% {
+        left: 250px
+    }
+    62.5% {
+        left: 190px
+    }
+    75% {
+        left: 130px
+    }
+    87.5% {
+        left: 70px
+    }
+    100% {
+        left: 10px
+    }
+}
+
+.type .rain {
+    animation: animation 10s infinite 0s linear;
+}
+
+.type .cloud {
+    animation: animation 10s infinite 0s linear;
+}
+
+.earthimg:hover {
+    transform: scale(2) !important;
+}
+
+
+/* responsiv */
+
+@media only screen and (max-width: 600px) {
+    .sun {
+        width: 200px;
+        right: -10px;
+        top: -10px;
+    }
+    .earth img {
+        width: 400px;
+    }
+    .cloud {
+        position: absolute;
+        top: 70px;
+        left: 10px;
+        width: 100px;
+    }
+    .rain {
+        position: absolute;
+        top: 70px;
+        left: 10px;
+        width: 100px;
+    }
+    @keyframes animation {
+        0% {
+            left: 10px;
+        }
+        12.5% {
+            left: 12px
+        }
+        25% {
+            left: 14px
+        }
+        37.5% {
+            left: 16px
+        }
+        50% {
+            left: 18px
+        }
+        62.5% {
+            left: 16px
+        }
+        75% {
+            left: 14px
+        }
+        87.5% {
+            left: 12px
+        }
+        100% {
+            left: 10px
+        }
+    }
+    .type .rain {
+        animation: animation 10s infinite 0s linear;
+    }
+    .type .cloud {
+        animation: animation 10s infinite 0s linear;
+    }
+}
